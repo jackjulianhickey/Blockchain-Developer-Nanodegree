@@ -64,13 +64,13 @@ class Blockchain {
     let self = this;
     return new Promise(async (resolve, reject) => {
       if (block.body) {
-        let height = await this.getChainHeight();
+        let height = await self.getChainHeight();
         block.height = height + 1;
 
         block.time = new Date().getTime().toString().slice(0, -3);
 
         if (block.height > 0) {
-          let prevBlock = await this.getBlockByHeight(height);
+          let prevBlock = await self.getBlockByHeight(height);
           block.previousBlockHash = prevBlock.hash;
         }
 
