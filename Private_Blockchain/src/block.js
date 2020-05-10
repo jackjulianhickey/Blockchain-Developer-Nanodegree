@@ -42,7 +42,7 @@ class Block {
       self.hash = null;
 
       // Recalculate the hash of the Block
-      const calcBlockHash = SHA256(JSON.stringify(self));
+      const calcBlockHash = SHA256(JSON.stringify(self)).toString();
       // Comparing if the hashes changed
       if (auxBlockHash === calcBlockHash) {
         // Returning the Block is valid
@@ -75,7 +75,7 @@ class Block {
       data = JSON.parse(data);
 
       if (self.height === 0) {
-        reject(Error("Genesis Block"));
+        resolve(null);
       } else {
         // Resolve with the data if the object isn't the Genesis block
         resolve(data);
