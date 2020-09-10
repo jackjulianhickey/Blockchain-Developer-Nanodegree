@@ -1,0 +1,15 @@
+{
+  "name": "test_web3_remix_interaction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "light-server": "^2.6.4",
+    "web3": "^1.2.8"
+  }
+}
